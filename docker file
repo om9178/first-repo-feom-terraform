@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('docker pull') {
+            steps {
+                echo 'pulling nginx image'
+                sh 'docker pull nginx:latest'
+            }
+        }
+    } 
+}    
